@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" id="http://dseye.ru/services/addon.html" version="0.2" defaultlocale="ru">
+	<name>DSeye</name>
+	<description xml:lang="en">Addon to search the selected text on dseye.ru for players destinysphere.ru.</description>
+	<description xml:lang="ru">Аддон для поиска выделенного текста на dseye.ru для игроков destinysphere.ru.</description>
+	<author href="http://esemi.ru" email="support@esemi.ru">esemi</author>
+
+	<icon src="i/18.png"/>
+	<icon src="i/64.png"/>
+	<icon src="i/128.png"/>
+
+	<feature name="opera:contextmenus"/>
+
+	<license href="http://www.opensource.org/licenses/mit-license.php">Licensed under the MIT license</license>
+
+	<preference name="onlyGameDomains" value="false"/>
+	<preference name="enableSearchHistory" value="true"/>
+	<preference name="allowStatSend" value="true"/>
+
+	<preference name="about_url" value="http://dseye.ru/services/addon.html" readonly = "true"/>
+	<preference name="search_url" value="http://dseye.ru/addon-api/search.html?term=[search-term]" readonly = "true"/>
+	<preference name="stat_url" value="http://dseye.ru/addon-api/stat-add.html" readonly = "true"/>
+	<preference name="game_domains" value="*://*.dsga.me/*|*://dsga.me/*|*://*.destinysphere.ru/*|*://destinysphere.ru/*|*://*.dseye.ru/*|*://dseye.ru/*|*://*.ds-game.ru/*', '*://ds-game.ru/*|*://*.ds-game.su/*', '*://ds-game.su/*|*://*.destinysphere.de/*', '*://destinysphere.de/*" readonly = "true"/>
+	<preference name="history_quota_count" value="100" readonly = "true"/>
+
+</widget>

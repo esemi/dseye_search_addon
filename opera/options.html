@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Language" content="ru-RU" />
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title>Настройки DSeye аддона</title>
+		<script>
+			function save_option() {
+				//work only with checkbox
+				if(this.type === "checkbox"){
+					widget.preferences.setItem(this.name, this.checked);
+					printMessage('Сохранено');
+				}
+			}
+
+			function restore_options() {
+				var props = document.getElementsByTagName('input');
+				for(var i=0; i<props.length; i++)
+				{
+					//work only with checkbox
+					if(props[i].type === "checkbox"){
+						if( widget.preferences.getItem(props[i].name) === 'true' )
+						{
+							props[i].checked = 'checked';
+						}else{
+							delete props[i].checked;
+						}
+					}
+				}
+			}
+
+			function printMessage(text) {
+				var status = document.getElementById('status');
+				status.innerHTML = text;
+				setTimeout(function() {
+					status.innerHTML = "";
+				}, 750);
+
+			}
+
+			//first reset options from storage
+			document.addEventListener('DOMContentLoaded', function(){
+				console.log('options restore');
+				restore_options();
+
+				//change option events
+				var options = document.querySelectorAll('input');
+				for(var i=0; i<options.length; i++)
+				{
+					options[i].addEventListener('change', save_option);
+				}
+
+			});
+
+		</script>
+	</head>
+
+	<body>
+		<div id="status" class="status-block"></div>
+		<table class="option-table">
+			<caption>
+				Настройки пользователя
+			</caption>
+			<tbody>
+				<tr>
+					<td>Ограничиваться доменами игры:<br>
+						<p class="subtext">Ограничивать ли пункт меню в поиске только доменами сферки</p>
+					</td>
+					<td><input type="checkbox" checked="checked" name="onlyGameDomains" /></td>
+				</tr>
+				<tr>
+					<td> Сохранять историю запросов:</td>
+					<td><input type="checkbox" name="enableSearchHistory" /></td>
+				</tr>
+				<tr>
+					<td>Отправлять статистику использования:
+						<p class="subtext">Разрешить отправлять анонимную статистику об использовании аддона авторам проекта</p>
+					</td>
+					<td><input type="checkbox" name="allowStatSend" /></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

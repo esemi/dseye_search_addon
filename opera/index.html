@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="lib/history.js"></script>
+		<script src="lib/contextMenu.js"></script>
+		<script src="lib/toolbar.js"></script>
+		<script>
+			window.addEventListener("load", function(){
+				console.log('main function call');
+
+				var cm = new CONTEXT_MENU();
+				cm.createSearchItem();
+				cm.initListeners();
+
+				var toolbar = new TOOLBAR();
+				toolbar.createButton();
+
+			}, false);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

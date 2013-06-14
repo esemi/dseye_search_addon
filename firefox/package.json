@@ -1,0 +1,32 @@
+{
+	"name": "dseye",
+	"license": "MPL 2.0",
+	"author": "esemi",
+	"version": "0.2",
+	"id": "jid1-AMISBhr9M1stHA",
+	"description": "Аддон для поиска выделенного текста на dseye.ru для игроков destinysphere.ru.",
+	"homepage": "http://dseye.ru/services/addon.html",
+	"icon": "data/i/48.png",
+	"icon64": "data/i/64.png",
+	"permissions": {"private-browsing": false},
+
+	"preferences": [
+	{
+		"name": "onlyGameDomains",
+		"title": "Ограничиваться доменами игры",
+		"description": "Ограничивать ли пункт меню в поиске только доменами игры",
+		"type": "bool",
+		"value": false
+	},{
+		"name": "enableSearchHistory",
+		"title": "Сохранять историю запросов",
+		"type": "bool",
+		"value": true
+	},{
+		"name": "allowStatSend",
+		"title": "Отправлять статистику использования",
+		"description": "Разрешить отправлять анонимную статистику об использовании аддона авторам проекта",
+		"type": "bool",
+		"value": true
+	}]
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Language" content="ru-RU" />
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title>Настройки DSeye аддона</title>
+	</head>
+
+	<body>
+		<div id="status" class="status-block"></div>
+		<table class="option-table">
+			<caption>
+				Настройки пользователя
+			</caption>
+			<tbody>
+				<tr>
+					<td>Ограничиваться доменами игры:<br>
+						<p class="subtext">Ограничивать ли пункт меню в поиске только доменами сферки</p>
+					</td>
+					<td><input type="checkbox" checked="checked" name="onlyGameDomains" /></td>
+				</tr>
+				<tr>
+					<td> Сохранять историю запросов:</td>
+					<td><input type="checkbox" name="enableSearchHistory" /></td>
+				</tr>
+				<tr>
+					<td>Отправлять статистику использования:
+						<p class="subtext">Разрешить отправлять анонимную статистику об использовании аддона авторам проекта</p>
+					</td>
+					<td><input type="checkbox" name="allowStatSend" /></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<script type="text/javascript" src="/lib/settings.js"></script>
+		<script type="text/javascript" src="options.js"></script>
+	</body>
+</html>

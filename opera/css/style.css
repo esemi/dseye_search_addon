@@ -1,0 +1,132 @@
+/*
+    Document   : style
+    Created on : 20.05.2013, 14:55:25
+    Author     : Ирина
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 1. Global Reset
+-----------------------------------------------------------------------------------------------*/
+
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed,
+	figure, figcaption, footer, header, hgroup,
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure,
+	footer, header, hgroup, menu, nav, section {
+			display: block;
+	}
+  /*  body {
+			line-height: 1;
+	}*/
+	a{
+		outline: none;
+	}
+	ol, ul {
+			list-style: none;
+	}
+	blockquote, q {
+			quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+			content: '';
+			content: none;
+	}
+	table {
+			border-collapse: collapse;
+			border-spacing: 0;
+	}
+	caption, th, td {
+		text-align: left;
+		font-weight: normal;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-weight:normal;
+	}
+/*End 1. Global Reset*/
+
+
+/* 2. General Elements
+-----------------------------------------------------------------------------------------------*/
+	html {
+	width: 100%;
+	height:100%;
+	background: fixed url('/img/background.gif') no-repeat right bottom;
+	font: 14px/1.5 Arial,Helvetica,sans-serif;
+	color:#6e0022;
+}
+	body {
+	height:100%;
+	width: 100%;
+	background:url('/img/background_top.gif') no-repeat left top;
+
+}
+	noscript, .alert{
+			color: #e90000;
+			text-align: center;
+		}
+	a{
+		color:#b00137;
+		text-decoration:underline;
+	}
+	a:hover, a:active{
+		color:#6e0022;
+		text-decoration:none;
+	}
+
+	acronym{
+		border-bottom:1px dashed #6e0022;
+	}
+/*End 2. General Elements*/
+
+
+	.option-table{
+		margin: 0px auto;
+		width: 465px;
+		position: relative;
+		top: 55px;
+	}
+	.option-table td{
+		padding:5px 13px;
+		font-size: larger;
+	}
+	.option-table caption{
+		font-size: 20px !important;
+		color:#b00137 !important;
+		font-weight: normal !important;
+		margin-left: -29px;
+		margin-bottom: 8px;
+	}
+
+	.subtext{
+		margin-left: 13px;
+		font-size: smaller;
+		color:#a5a5a5;
+	}
+
+	.status-block{
+		color: #1c8e00;
+		position: absolute;
+		top:21px;
+		left:45%;
+
+	}
